@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="bkg.jpg" />
+		<div class="wrap">
+			<div class="flow">
+				<h1>
+					<em>wilmington</em>
+					<span>one day deals</span>
+				</h1>
+				<form method="post" action="#">
+					<fieldset>
+						<label for="email_address">
+							enter your email address
+						</label>
+						<input type="text" name="email_address" tabindex="1" />
+						<p class="agreement">
+							By subscribing, I agree to the <a href="#" title="Terms and conditions" tabindex="3">terms and conditions</a> and <a href="#" title="privacy policy" tabindex="4">privacy policy</a>.
+						</p>
+					</fieldset>
+					<div class="button_holder">
+						<span class="outer_button">
+							<button type="submit" tabindex="2">
+								sign up
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<ul>
+				<li class="active">
+					<a href="#" title="sign up" tabindex="5">
+						sign up
+					</a>
+				</li>
+				<li>
+					<a href="#" title="how it works" tabindex="6">how it works</a>
+				</li>
+				<li>
+					<a href="#" title="about us" tabindex="7">about us</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" id="logo" tabindex="8">livingsocial</a>
+		<style type="text/css" media="screen">
+			@font-face {
+					font-family: 'Custom Arial Rounded MT Bold';
+					src: url('arialroundedbold.eot');
+					src: 
+							 url('arialroundedbold.svg#arialroundedbold') format('svg'),
+								url('arialroundedbold.eot?#iefix') format('embedded-opentype'),
+							 url('arialroundedbold.woff') format('woff'),
+							 url('arialroundedbold.ttf') format('truetype');
+					font-weight: normal;
+					font-style: normal;
+			}
+			
+			img {
+				position: absolute;
+				z-index: 0;
+				left: 0;
+				top: 0;
+				width: 100%;
+			}
+			
+			.wrap {
+				background-color: #fff;
+				position: absolute;
+				left: 50%;
+				width: 500px;
+				margin: 202px 0 0 -250px;
+				padding: 67px 0 21px;
+				border-radius: 0 0px 5px 5px;
+			}
+			
+			html {
+				background-color: #000;
+			}
+				
+			body, button {
+				font-family: "Custom Arial Rounded MT Bold", sans-serif;
+			}
+			
+			html, body {
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				min-height: 500px;
+			}
+			p {
+				margin: 8px 0 17px 0;
+			}
+			a {
+				text-decoration: none;
+				color: #5fb8dd;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			#logo {
+				height: 86px;
+				width: 500px;
+				
+				display: block;
+				border-radius: 5px 5px 0px 0px;
+				color: #fff;
+				height: 86px;
+				background: #262626 url("logo.png") no-repeat 20px 20px;
+				text-indent: -9999px;
+				overflow: hidden;
+				line-height: 0;
+				text-decoration: none;
+				position: absolute;
+				top: 116px;
+				left: 50%;
+				margin: 0 0 0 -250px;
+			}
+			ul {
+				top: 0px;
+				background-color: #454545;
+				height: 40px;
+				padding: 0;
+				list-style: none;
+				position: absolute;
+				left: 0;
+				height: 40px;
+				width: 100%;
+				margin: 0;
+				
+			}
+			ul > li {
+				display: inline-block;
+				height: 40px;
+			}
+			ul > li > a {
+				font-size: 14px;
+				line-height: 40px;
+				padding: 0 23px;
+				display: inline-block;
+			}
+			ul > li.active {
+				position: relative;
+			}
+			ul > li.active > a {
+				text-shadow: 0px 1px rgba(30,30,30,.3);
+				top: -1px;
+				bottom: -1px;
+				z-index: 1;
+				
+				color: #fff;
+				background-color: #09abd3;
+				position: relative;
+				
+				/* IE10 Consumer Preview */ 
+				background-image: -ms-linear-gradient(top, #09B8E3 0%, #089CBF 100%);
+
+				/* Mozilla Firefox */ 
+				background-image: -moz-linear-gradient(top, #09B8E3 0%, #089CBF 100%);
+
+				/* Opera */ 
+				background-image: -o-linear-gradient(top, #09B8E3 0%, #089CBF 100%);
+
+				/* Webkit (Safari/Chrome 10) */ 
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #09B8E3), color-stop(1, #089CBF));
+
+				/* Webkit (Chrome 11+) */ 
+				background-image: -webkit-linear-gradient(top, #09B8E3 0%, #089CBF 100%);
+
+				/* W3C Markup, IE10 Release Preview */ 
+				background-image: linear-gradient(to bottom, #09B8E3 0%, #089CBF 100%);
+				
+				border-top: 1px solid #84dcf1;
+				border-bottom: 1px solid #b2b2b2;
+
+			}
+			ul > li.active > a:after {
+				position: absolute;
+				top: 40px;
+				content: "";
+				height: 9px;
+				width: 15px;
+				background: url('activearrow.png') no-repeat;
+				left: 50%;
+				margin-left: -7px;
+			}
+			h1 {
+				color: #262626;
+				padding-left: 15px;
+				margin: 0;
+			}
+			.flow {
+			}
+			h1 > em {
+				font-size: 14px;
+				color: #909090;
+				display: block;
+				font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+				font-style: normal;
+				/*margin: 27px 0 7px 0;*/
+			}
+			h1 > span {
+				border-radius: 4px 4px 0 0;
+				
+				color: #262626;
+				
+				display: block;
+				
+				width: 303px;
+				height: 43px;
+				margin-top: 7px;
+			}
+			
+			fieldset {
+				background-color: #e6e6e6;
+				border-style: none;
+				border-bottom: 1px solid #a5a5a5;
+				border-radius: 6px;
+				padding: 0;
+				margin: 18px 21px 0 21px;
+			}
+			label {
+				font-size: 16px;
+				color: #454545;
+				display: block;
+				padding: 17px 0px 6px 23px;
+			}
+			input {
+				margin: 0 20px 0;
+				font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+				font-size: 32px;
+				color: #262626;
+				padding-left: 10px;
+				line-height: 45px;
+				width: 403px;
+				border: 2px solid #bebebe;
+				border-radius: 6px;
+			}
+			.agreement {
+				color: #909090;
+				font-size: 11px;
+				padding-left: 23px;
+			}
+			
+			.button_holder {
+				padding-right: 21px;
+				text-align: right;
+			}
+			
+			span.outer_button {
+				box-shadow: 0px 1px 0px rgba(30,30,30,.3);
+				display: inline-block;
+				margin-top: 19px;
+				margin-left: 79px;
+				border-radius: 4px;
+				
+			}
+			
+			button {
+				border-radius: 4px;
+				cursor: pointer;
+				
+				box-shadow: inset 0 -1px 0 #127c96;
+				
+				padding: 0 0 2px 0;
+				line-height: 1;
+				
+				
+				width: 150px;
+				height: 46px;
+				
+				
+				font-size: 24px;
+				color: #fff;
+				
+				border-style: none;
+				
+
+				display: inline-block;
+
+				background: -moz-linear-gradient(top,  #0898bb 0%, #09b9e3 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0898bb), color-stop(100%,#09b9e3)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #0898bb 0%,#09b9e3 100%); /* W3C */
+				/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0898bb', endColorstr='#09b9e3',GradientType=0 ); */
+				
+			}
+		</style>
+	</body>
+</html>
