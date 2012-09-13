@@ -2,60 +2,15 @@
 <html>
 	<head>
 		<title></title>
-	</head>
-	<body>
-		<img src="bkg.jpg" />
-		<div class="wrap">
-			<div class="flow">
-				<h1>
-					<em>wilmington</em>
-					<span>one day deals</span>
-				</h1>
-				<form method="post" action="#">
-					<fieldset>
-						<label for="email_address">
-							enter your email address
-						</label>
-						<input type="text" name="email_address" tabindex="1" />
-						<p class="agreement">
-							By subscribing, I agree to the <a href="#" title="Terms and conditions" tabindex="3">terms and conditions</a> and <a href="#" title="privacy policy" tabindex="4">privacy policy</a>.
-						</p>
-					</fieldset>
-					<div class="button_holder">
-						<span class="outer_button">
-							<button type="submit" tabindex="2">
-								sign up
-							</button>
-						</span>
-					</div>
-				</form>
-			</div>
-			<ul>
-				<li class="active">
-					<a href="#" title="sign up" tabindex="5">
-						sign up
-					</a>
-				</li>
-				<li>
-					<a href="#" title="how it works" tabindex="6">how it works</a>
-				</li>
-				<li>
-					<a href="#" title="about us" tabindex="7">about us</a>
-				</li>
-			</ul>
-		</div>
-		<a href="#" id="logo" tabindex="8">livingsocial</a>
 		<style type="text/css" media="screen">
+			
 			@font-face {
 					font-family: 'Custom Arial Rounded MT Bold';
 					src: url('arialroundedbold.eot');
-					src: 
-							 url('arialroundedbold.svg#arialroundedbold') format('svg'),
-								url('arialroundedbold.eot?#iefix') format('embedded-opentype'),
-							 url('arialroundedbold.woff') format('woff'),
-							 url('arialroundedbold.ttf') format('truetype');
-					font-weight: normal;
-					font-style: normal;
+					src: local('Custom Arial Rounded MT Bold'), 
+							 local('Comfortaa'), 
+							 url('arialroundedbold.ttf') format('truetype'),
+							 url('arialroundedbold.svg#font') format('svg'); 
 			}
 			
 			img {
@@ -73,11 +28,12 @@
 				width: 500px;
 				margin: 202px 0 0 -250px;
 				padding: 67px 0 21px;
-				border-radius: 0 0px 5px 5px;
+				border-radius: 0 0px 4px 4px;
 			}
 			
 			html {
 				background-color: #000;
+				font-size: 16px;
 			}
 				
 			body, button {
@@ -104,23 +60,30 @@
 				text-decoration: underline;
 			}
 			
-			#logo {
+			#logo-wrapper {
 				height: 86px;
 				width: 500px;
 				
 				display: block;
-				border-radius: 5px 5px 0px 0px;
+				border-radius: 4px 4px 0px 0px;
 				color: #fff;
 				height: 86px;
-				background: #262626 url("logo.png") no-repeat 20px 20px;
-				text-indent: -9999px;
-				overflow: hidden;
-				line-height: 0;
-				text-decoration: none;
 				position: absolute;
 				top: 116px;
 				left: 50%;
 				margin: 0 0 0 -250px;
+				background: #262626;
+			}
+			#logo {
+				margin: 20px;
+				width: 122px;
+				height: 44px;
+				display: inline-block;
+				background: #262626 url("sprite.png") no-repeat 0px -9px;
+				text-indent: -9999px;
+				overflow: hidden;
+				line-height: 0;
+				text-decoration: none;
 			}
 			ul {
 				top: 0px;
@@ -141,14 +104,18 @@
 			}
 			ul > li > a {
 				font-size: 14px;
-				line-height: 40px;
-				padding: 0 23px;
 				display: inline-block;
+				line-height: 36px;
+				padding: 1px 19px 3px 19px;
+				vertical-align: top;
+				margin-right: 7px;
 			}
 			ul > li.active {
 				position: relative;
 			}
 			ul > li.active > a {
+				line-height: 40px;
+				padding: 0 19px;
 				text-shadow: 0px 1px rgba(30,30,30,.3);
 				top: -1px;
 				bottom: -1px;
@@ -186,7 +153,7 @@
 				content: "";
 				height: 9px;
 				width: 15px;
-				background: url('activearrow.png') no-repeat;
+				background: url("sprite.png") no-repeat 0px 0px;
 				left: 50%;
 				margin-left: -7px;
 			}
@@ -211,10 +178,8 @@
 				color: #262626;
 				
 				display: block;
-				
-				width: 303px;
-				height: 43px;
 				margin-top: 7px;
+				font-size: 46px;
 			}
 			
 			fieldset {
@@ -294,5 +259,50 @@
 				
 			}
 		</style>
+	</head>
+	<body>
+		<img src="bkg.jpg" />
+		<div class="wrap">
+			<div class="flow">
+				<h1>
+					<em>wilmington</em>
+					<span>one day deals</span>
+				</h1>
+				<form method="post" action="#">
+					<fieldset>
+						<label for="email_address">
+							enter your email address
+						</label>
+						<input type="text" id="email_address" tabindex="1" />
+						<p class="agreement">
+							By subscribing, I agree to the <a href="#" title="Terms and conditions" tabindex="3">terms and conditions</a> and <a href="#" title="privacy policy" tabindex="4">privacy policy</a>.
+						</p>
+					</fieldset>
+					<div class="button_holder">
+						<span class="outer_button">
+							<button type="submit" tabindex="2">
+								sign up
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<ul>
+				<li class="active">
+					<a href="#" title="sign up" tabindex="5">
+						sign up
+					</a>
+				</li>
+				<li>
+					<a href="#" title="how it works" tabindex="6">how it works</a>
+				</li>
+				<li>
+					<a href="#" title="about us" tabindex="7">about us</a>
+				</li>
+			</ul>
+		</div>
+		<div id="logo-wrapper">
+			<a href="#" id="logo" tabindex="8">livingsocial</a>
+		</div>
 	</body>
 </html>
