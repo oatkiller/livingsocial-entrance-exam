@@ -159,7 +159,7 @@
 			}
 			h1 {
 				color: #262626;
-				padding-left: 15px;
+				padding-left: 20px;
 				margin: 0;
 			}
 			.flow {
@@ -178,7 +178,7 @@
 				color: #262626;
 				
 				display: block;
-				margin-top: 7px;
+				margin-top: -6px;
 				font-size: 46px;
 			}
 			
@@ -186,18 +186,18 @@
 				background-color: #e6e6e6;
 				border-style: none;
 				border-bottom: 1px solid #a5a5a5;
-				border-radius: 6px;
+				border-radius: 4px;
 				padding: 0;
-				margin: 18px 21px 0 21px;
+				margin: 20px 21px 0 19px;
 			}
 			label {
 				font-size: 16px;
 				color: #454545;
 				display: block;
-				padding: 17px 0px 6px 23px;
+				padding: 18px 0px 6px 21px;
 			}
 			input {
-				margin: 0 20px 0;
+				margin: 1px 20px 0 20px;
 				font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
 				font-size: 32px;
 				color: #262626;
@@ -210,7 +210,9 @@
 			.agreement {
 				color: #909090;
 				font-size: 11px;
-				padding-left: 23px;
+				padding-left: 21px;
+				margin-top: 7px;
+				margin-bottom: 14px;
 			}
 			
 			.button_holder {
@@ -261,7 +263,15 @@
 		</style>
 	</head>
 	<body>
-		<img src="bkg.jpg" />
+		<img src="bkg.jpg" id="background" />
+		<script type="text/javascript">
+			// this is to make the page look white until the background image loads
+			var htmlElement = document.body.parentNode;
+			htmlElement.style.backgroundColor = "#fff";
+			document.getElementById("background").onload = function () {
+				htmlElement.style.backgroundColor = "#000";
+			};
+		</script>
 		<div class="wrap">
 			<div class="flow">
 				<h1>
