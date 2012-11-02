@@ -146,7 +146,7 @@
 				border-bottom: 1px solid #b2b2b2;
 
 			}
-			ul > li.active > a:after {
+			ul > li.active > a > .after {
 				position: absolute;
 				top: 40px;
 				content: "";
@@ -181,12 +181,10 @@
 				font-size: 46px;
 			}
 			
-			fieldset {
+			form > div.fieldset {
 				background-color: #e6e6e6;
-				border-style: none;
 				border-bottom: 1px solid #a5a5a5;
 				border-radius: 4px;
-				padding: 0;
 				margin: 20px 21px 0 19px;
 			}
 			label {
@@ -229,6 +227,8 @@
 			}
 			
 			button {
+				width: auto;
+				overflow: visible;
 				border-radius: 4px;
 				cursor: pointer;
 				
@@ -250,13 +250,14 @@
 
 				display: inline-block;
 
+				background: #0898bb;
 				background: -moz-linear-gradient(top,  #0898bb 0%, #09b9e3 100%); /* FF3.6+ */
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0898bb), color-stop(100%,#09b9e3)); /* Chrome,Safari4+ */
 				background: -webkit-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* Chrome10+,Safari5.1+ */
 				background: -o-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* Opera 11.10+ */
 				background: -ms-linear-gradient(top,  #0898bb 0%,#09b9e3 100%); /* IE10+ */
 				background: linear-gradient(to bottom,  #0898bb 0%,#09b9e3 100%); /* W3C */
-				/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0898bb', endColorstr='#09b9e3',GradientType=0 ); */
+				/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0898bb', endColorstr='#09b9e3',GradientType=0 );*/
 				
 			}
 		</style>
@@ -278,7 +279,7 @@
 					<span>one day deals</span>
 				</h1>
 				<form method="post" action="#">
-					<fieldset>
+					<div class="fieldset">
 						<label for="email_address">
 							enter your email address
 						</label>
@@ -286,7 +287,7 @@
 						<p class="agreement">
 							By subscribing, I agree to the <a href="#" title="Terms and conditions" tabindex="3">terms and conditions</a> and <a href="#" title="privacy policy" tabindex="4">privacy policy</a>.
 						</p>
-					</fieldset>
+					</div>
 					<div class="button_holder">
 						<span class="outer_button">
 							<button type="submit" tabindex="2">
@@ -300,6 +301,7 @@
 				<li class="active">
 					<a href="#" title="sign up" tabindex="5">
 						sign up
+						<span class="after"></span>
 					</a>
 				</li>
 				<li>
